@@ -12,7 +12,7 @@
 # other
 # rm -rf package/utils/{ucode,fbtest}
 rm -rf openwrt-custom openwrt-custom
-git clone https://github.com/kenzok8/small-package.git 
+git clone https://github.com/kenzok8/small-package.git openwrt-custom
 
 sed -i '$a src-link custom openwrt-custom' feeds.conf.default
 
