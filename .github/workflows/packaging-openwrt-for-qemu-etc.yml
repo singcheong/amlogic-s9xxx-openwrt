@@ -90,7 +90,7 @@ jobs:
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         run: |
           armvirt_tarfile_repo="singcheong/amlogic-s9xxx-openwrt"
-          releases_tag_keywords="OpenWrt-22.03"
+          releases_tag_keywords="OpenWrt"
 
           armvirt_tarfile_path="openwrt/bin/targets/armvirt/64"
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
