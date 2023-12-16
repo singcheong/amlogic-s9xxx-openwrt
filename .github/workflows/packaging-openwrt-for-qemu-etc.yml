@@ -13,53 +13,17 @@ on:
       openwrt_soc:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "s905d"
         type: choice
         options:
-          - all
-          - s922x_s905x3_s905x2_s912_s905d_s905
-          - ak88
-          - beikeyun
-          - cm3
-          - e25
-          - l1pro
-          - photonicat
-          - qemu
-          - r66s
-          - r68s
-          - jp-tvbox
-          - ht2
-          - h28k
-          - h66k
-          - h68k
-          - h69k
-          - h69k-max
-          - h88k
-          - h88k-v3
-          - watermelon-pi
-          - rock5b
-          - s905
           - s905d
-          - s905x2
-          - s905x3
-          - s912
-          - s922x
-          - s922x-n2
-          - vplus
-          - zcube1-max
-          - diy
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "5.15.1_6.1.1"
+        default: "5.10.1"
         type: choice
         options:
-          - 5.4.1_5.10.1
-          - 5.15.1_6.1.1
-          - 5.4.1
           - 5.10.1
-          - 5.15.1
-          - 6.1.1
       kernel_repo:
         description: "Set the kernel repository"
         required: false
@@ -125,8 +89,8 @@ jobs:
         id: down
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         run: |
-          armvirt_tarfile_repo="ophub/amlogic-s9xxx-openwrt"
-          releases_tag_keywords="OpenWrt_lede_"
+          armvirt_tarfile_repo="singcheong/amlogic-s9xxx-openwrt"
+          releases_tag_keywords="OpenWrt-22.03"
 
           armvirt_tarfile_path="openwrt/bin/targets/armvirt/64"
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
