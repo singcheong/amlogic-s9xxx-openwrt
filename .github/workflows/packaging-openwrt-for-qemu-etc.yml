@@ -23,7 +23,7 @@ on:
         default: "5.10.1"
         type: choice
         options:
-          - 5.10.1
+          - 5.10.138
       kernel_repo:
         description: "Set the kernel repository"
         required: false
