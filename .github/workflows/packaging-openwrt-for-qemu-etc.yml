@@ -146,7 +146,6 @@ jobs:
             - Default password: password
             - Default WIFI name: OpenWrt
             - Default WIFI password: none
-            - DISABLED_SERVICES="zerotier"
             ### Install to EMMC
             - Login to OpenWrt → System → Amlogic Service → Install OpenWrt
             ### OpenWrt Image Verification
